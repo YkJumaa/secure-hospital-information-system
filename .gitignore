@@ -1,0 +1,16 @@
+# Exclude the local database config (contains your local credentials)
+db.php
+
+# Exclude OS junk files
+.DS_Store
+Thumbs.db
+
+# Exclude editor folders
+.vscode/
+.idea/
+
+# Exclude log files
+*.log
+
+# Exclude the GitHub workflows folder (it will be tracked but not excluded)
+!.github/
