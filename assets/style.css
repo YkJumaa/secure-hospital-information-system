@@ -194,3 +194,118 @@ table th {
 .pagination a.active {
     background: #2c3e50;
 }
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+    /* Container – use almost full width */
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    /* Dashboard header – stack vertically */
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+
+    .user-info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Card grid – one column */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Card padding reduced */
+    .card {
+        padding: 15px;
+    }
+
+    /* Tables – horizontal scroll instead of breaking layout */
+    .table-responsive,
+    .manage-users-table,
+    .appointments-table {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    /* For small tables that can wrap, use 100% width */
+    table:not(.special-table) {
+        min-width: 100%;
+    }
+
+    /* Form inputs – full width and larger touch area */
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Buttons – full width on small screens, but keep inline buttons as is */
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* For inline buttons (e.g., in appointment actions), allow smaller width */
+    .appointment-actions .btn,
+    .reset-form .btn {
+        width: auto;
+        display: inline-block;
+        margin: 2px;
+        padding: 6px 10px;
+    }
+
+    /* Reset form (admin panel) – stack vertically */
+    .reset-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+    .reset-form input[type="password"] {
+        width: 100%;
+    }
+
+    /* Two‑column card grids inside a card – make single column */
+    .card .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Audit log pagination – smaller links */
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    /* Patient dashboard record boxes – reduce padding */
+    .dashboard-content .card div[style*="border:1px solid"] {
+        padding: 8px !important;
+    }
+}
